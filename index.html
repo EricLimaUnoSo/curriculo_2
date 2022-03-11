@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <title>Eric Lima Uno So</title>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        #presentation {
+            background-image: url("fundo1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        #foto {
+            width: 16rem;
+            height: 16rem;
+            background-image: url("imgs/eric.jpeg");
+            background-size: cover;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            scrollTo(0, 0);
+            $("header > nav").hide();
+            $(window).scroll(function () {
+                if (scrollY == 0) {
+                    $("header > nav").fadeOut();
+                } else {
+                    $("header > nav").fadeIn();
+                }
+            });
+            $("#startNavigation").click(function(){
+                scrollTo(0, $("#startMarker").offset().top);
+            });
+        });
+    </script>
+</head>
+<body class="bg-light">
+    <span id="topMarker"></span>
+    <header class="container fixed-top" id="header">
+        <nav style="border-radius: 10px; box-shadow: 0 0 20px 0 #000;" class="navbar navbar-expand-sm navbar-light bg-light p-2 m-2 justify-content-between">
+            <a href="#topMarker" class="navbar-brand pl-2">Eric Lima Uno So</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#startMarker" class="nav-link">Gostos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#planMarker" class="nav-link">Planos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container-fluid">
+        <section id="presentation" style="height: 100vh;" class="row justify-content-center align-content-center">
+            <div style="height: max-content; border-radius: 20px; box-shadow: 0 0 20px 0 #000;" class="col col-sm-10 col-md-8 col-lg-6 col-4-xl mx-4 bg-light p-4">
+                <div class="row justify-content-center justify-content-sm-start">
+                    <div class="mx-3 mb-3 rounded-circle border border-dark" id="foto"></div>
+                    <div class="col-12 col-sm">
+                        <h3 class="text-center text-sm-left mb-4">Eric Lima Uno So</h3>
+                        <p class="text-center text-sm-left">Nascido em 03 de setembro de 2004</p>
+                        <p class="text-center text-sm-left">Estudante de Informática para Internet no IFSP - Guarulhos</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center justify-content-sm-end">
+                    <button type="button" class="btn btn-primary mx-3 mt-3" id="startNavigation">Saiba mais</button>
+                </div>
+            </div>
+        </section>
+        <div id="startMarker"></div>
+        <section class="card-deck mt-5">
+            <h2 style="margin: auto; width: 100%;" class="text-center my-3">Sobre mim</h2>
+            <div class="card">
+                <img class="card-img-top" src="imgs/eric_surf.jpg" alt="Eric surfando">
+                <div class="card-body">
+                    <p class="card-text">Desde criança, por causa do meu tio que tinha uma escola de surf, eu sempre fui apaixonado em surfar, até cheguei a dar aquelas
+                        em um período da minha adolescência, por volta de quando eu tinha uns 13/14 anos. Até hoje eu gosto muito, porém é complicado ficar indo para a 
+                        praia sempre pra surfar, então acabou se tornando algo muito menos frequente.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="imgs/eric_jogando.jpeg" alt="Eric jogando">
+                <div class="card-body">
+                    <p class="card-text">Desde pequeno sempre gostei muito de jogos, computadores, vídeogames e etc. Nessa pandemia agora eu fiquei mais viciado ainda,
+                        comecei a jogar competitivamente, treinei muito e desenvolvi uma rotina para isso. Hoje em dia não jogo mais competitivamente, mas trouxe muitos
+                        aprendizados do tempo que jogava profissionalmente.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="card-deck mt-5">
+            <div class="card">
+                <img class="card-img-top" src="imgs/cursos.jpg" alt="Vetorial de cursos">
+                <div class="card-body">
+                    <p class="card-text">Ainda não sei exatamente o que vou cursar mais para frente, eu sou muito indeciso com isso hahahaha. Sempre acabo me apaixonando
+                        por algum curso muito louco quando começo a conhecer, mas por ser paixão, ela passa rápido e eu já conheço um outro curso que me interesso.
+                        Pretendo ainda seguir alguma área que dê andamento ao curso de informática ou algo na área da saúde, acredito que essas sejão as que eu mais gosto.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="imgs/academia.jpg" alt="Academia e esportes">
+                <div class="card-body">
+                    <p class="card-text">Peguei muito apreço por treinar esses tempos, gosto muito de ir à academia, porém esses tempos têm sido bem difícil para eu
+                        conseguir ir, estou um pouco sem tempo por causa dos estudos e trabalho. Sempre tentei praticar muitos esportes, mas nunca fui realmente
+                    comprometido com nenhum. Acredito que quando eu puder apenas voltaria para a academia, é algo que eu realmente criei gosto fazendo.</p>
+                </div>
+            </div>
+        </section>
+        <div id="planMarker"></div>
+        <section class="card-deck my-5">
+            <h2 style="margin: auto; width: 100%;" class="text-center my-3">Expectativas para o futuro</h2>
+            <div class="card">
+            <div class="card-body">
+                <p class="card-text">- Pretendo me formar e ir cursar uma faculdade, trabalhar bastante e conquistar a minha liberdade para viajar o mundo. Essa é 
+                    uma das minhas grandes vontades, conhecer o mundo, culturas diferentes, lugares diferentes, pessoas, comidas, tudo. Quero viajar bastante pelo Brasil
+                    ainda e gravar e tirar fotos das minhas viagens para construir um portifólio bacana sobre elas.
+                </p>
+                <p class="card-text">- Quero muito encaixar um tempo na minha rotina para ler e ir à academia também, nesses tempos consegui criar o hábito de ler, porém,
+                    não é sempre que eu consigo. Aprendi a gostar de livros lendo alguns sobre economia e autodesenvolvimento, são interessantíssimos e me fizeram
+                    curtir muito todas as leituras. 
+                </p>
+                <p class="card-text">- Gostaria muito de ter uma casa na praia também para eu conseguir surfar com mais frequência e poder tirar umas férias por lá
+                    com meus amigos quando der hahahaha.
+                    Enfim, por agora quero estudar e trabalhar muito para construir a minha vida lá para frente, me considero alguém que gosta de viver os momentos,
+                    então estou aproveitando bastante agora essa fase do final do meu ensino médio para conseguir focar muito no trabalho e na minha graduação sem
+                    pensar que estou arrependido de não ter feito algo.
+                </p>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
